@@ -1,23 +1,21 @@
-import React from "react";
-import styles from "./Cardapio.module.scss";
-import Logo from "assets/logo.svg";
-import { Buscador } from "./Buscador";
-import { useState } from "react";
-import { Filtros } from "./Filtros";
-import { Ordenador } from "./Ordenador";
-import { Itens } from "./Itens";
+import React from 'react';
+import styles from './Cardapio.module.scss';
+import { Buscador } from './Buscador';
+import { useState } from 'react';
+import { Filtros } from './Filtros';
+import { Ordenador } from './Ordenador';
+import { Itens } from './Itens';
+import Menu from 'components/Menu';
 
 export function Cardapio() {
-  const [busca, setBusca] = useState("");
+  const [busca, setBusca] = useState('');
   const [filtro, setFiltro] = useState<number | null>(null);
-  const [ordenador, setOrdenador] = useState("");
+  const [ordenador, setOrdenador] = useState('');
 
   return (
     <>
-      <main>
-        <nav className={styles.menu}>
-          <img src={Logo} alt="Logo do Aluroni" />
-        </nav>
+      <main> 
+        <Menu />     
         <header className={styles.header}>
           <div className={styles.header__text}>A casa do código e da massa</div>
         </header>
